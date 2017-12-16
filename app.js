@@ -6,7 +6,6 @@ var express = require('express'),
     fs = require('fs'),
     atob = require('atob'),
     btoa = require('btoa'),
-    FacePlusPlus = require('faceplusplus'),
     FileReader = require('filereader');
     bodyParser = require('body-parser');
 
@@ -36,14 +35,6 @@ app.get('/upload', function(req, res){
     res.render('upload');
 });
 app.post('/upload', upload, function(req, res){
-    // let img_64 = '';
-    // fs.readFile('./public/woman.png', 'base64', function(err, data){
-    //     if(!err){
-    //         img_64 = data;
-    //     }else{
-    //         res.send(err);
-    //     }
-    // });
     var url = 'https://api-us.faceplusplus.com/facepp/v3/detect';
     console.log(req.file.path);
     request.post({
