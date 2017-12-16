@@ -9,12 +9,6 @@ var express = require('express'),
     FileReader = require('filereader');
     bodyParser = require('body-parser');
 
-var config = {
-    api_key: 'lzw9nEShl_Xh9A0yjEkhwfn6ys9LKqQ2',
-    api_secret: 'i8bWgqp3HyrlQqwZFeR2aLLNh0glFpmx',
-    region: 'us'
-}
-var client = new FacePlusPlus(config);
 var storage =   multer.diskStorage({
     destination: function (req, file, callback) {
         callback(null, './uploads');
