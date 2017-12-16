@@ -52,9 +52,10 @@ app.post('/analyze', function(req, res){
             var parsedResults = JSON.parse(body);
             res.render('analyze', {results:parsedResults, image:image_url});
         }else{
-            res.render('error');
+            
+            //res.render('error');
             console.log(err);
-            //res.send(err + ' ' + JSON.stringify(response) + response.statusCode);
+            res.send(err + ' ' + JSON.stringify(response) + response.statusCode);
         }
     });
 });
