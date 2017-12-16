@@ -30,20 +30,21 @@ app.get('/upload', function(req, res){
 });
 app.post('/upload', upload, function(req, res){
     var url = 'https://api-us.faceplusplus.com/facepp/v3/detect';
+    var image_url = 'https://facialdata.herokuapp.com/public/' + req.file.filename;
     console.log(req.file.path);
     request.post({
         url: url,
         qs: {
             api_key: 'lzw9nEShl_Xh9A0yjEkhwfn6ys9LKqQ2',
             api_secret: 'i8bWgqp3HyrlQqwZFeR2aLLNh0glFpmx',
-            image_url: 'https://facialdata.herokuapp.com/public/' + req.file.filename,        
+            image_url: image_url,        
             return_attributes: 'age,gender,emotion,ethnicity'
         }
     }, function(err, response, body){
         if(!err && response.statusCode == 200){
             res.send(body);
         }else{
-            console.log(err);
+            console.log(image_url);
             res.send(err + ' ' + JSON.stringify(response) + response.statusCode);
         }
     });
