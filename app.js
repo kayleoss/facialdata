@@ -11,7 +11,7 @@ var express = require('express'),
 
 var storage =   multer.diskStorage({
     destination: function (req, file, callback) {
-        callback(null, './uploads');
+        callback(null, './public');
     },
     filename: function (req, file, callback) {
         callback(null, file.originalname);
@@ -36,7 +36,7 @@ app.post('/upload', upload, function(req, res){
         qs: {
             api_key: 'lzw9nEShl_Xh9A0yjEkhwfn6ys9LKqQ2',
             api_secret: 'i8bWgqp3HyrlQqwZFeR2aLLNh0glFpmx',
-            image_url: 'https://facialdata.herokuapp.com/uploads/' + req.file.filename,        
+            image_url: 'https://facialdata.herokuapp.com/public/' + req.file.filename,        
             return_attributes: 'age,gender,emotion,ethnicity'
         }
     }, function(err, response, body){
