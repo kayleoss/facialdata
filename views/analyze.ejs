@@ -1,0 +1,19 @@
+<% include partials/header %>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 custom-container">
+                <img src="<%= image %>" class="custom-image">
+            </div>
+            <div class="col s12 m6 custom-container">
+                <% results.faces.map(face => { %>
+                    <p class="attribute"><%= face.attributes.gender.value %></p>
+                    <p class="attribute"><%= face.attributes.age.value %></p>
+                    <p class="attribute"><%= face.attributes.ethnicity.value %></p>
+               <% }) %>
+            </div>
+        </div>
+    </div>
+
+
+
+<% include partials/footer %>

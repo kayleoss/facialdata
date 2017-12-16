@@ -125,6 +125,11 @@ nav ul li a{
     width:50%;
     box-shadow:2px 2px 8px black;
 }
+.attribute{
+    text-align:left;
+    color:rgb(1, 78, 102);
+    font-size:2em;
+}
 /* end of custom container */
 
 /* footer */

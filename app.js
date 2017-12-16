@@ -49,10 +49,11 @@ app.post('/analyze', function(req, res){
         }
     }, function(err, response, body){
         if(!err && response.statusCode == 200){
-            res.send(body);
+            var parsedResults = JSON.parse(body);
+            res.render('analyze', {results:parsedResults, image:image_url});
         }else{
-            console.log(image_url);
-            res.send(err + ' ' + JSON.stringify(response) + response.statusCode);
+            res.render('error');
+            //res.send(err + ' ' + JSON.stringify(response) + response.statusCode);
         }
     });
 });
