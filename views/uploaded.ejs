@@ -1,0 +1,13 @@
+<% include partials/header %>
+
+    <div class='container custom-container' style="margin-top:0">
+        <img src="/<%= uploaded_file.filename %>" class="custom-image"/>
+        <form action='/analyze' method="POST">
+            <input type="text" name="imageFile" value="<%= uploaded_file.filename%>" >
+            <button type="submit" class="light-blue darken-4 btn-large" style="margin-top:5%">Get Facial Data</button>
+        </form>
+    </div>
+    
+
+
+<% include partials/footer %>

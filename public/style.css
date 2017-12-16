@@ -10,12 +10,6 @@ body{
     background-size:cover;
     overflow-x:hidden;
 }
-#file{
-    margin-top:5%;
-    padding-left:15%;
-    text-align:center;
-    color:rgb(2, 48, 78);
-}
 /* nav */
 nav{
     background:transparent;
@@ -127,7 +121,10 @@ nav ul li a{
     font-size:1.2em;
     text-align:left;
 }
-
+.custom-image{
+    width:50%;
+    box-shadow:2px 2px 8px black;
+}
 /* end of custom container */
 
 /* footer */

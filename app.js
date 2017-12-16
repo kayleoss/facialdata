@@ -21,6 +21,10 @@ var upload = multer({ storage : storage}).single('userPhoto');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
 
 app.get('/', function(req, res){
     res.render('home');
@@ -29,15 +33,18 @@ app.get('/upload', function(req, res){
     res.render('upload');
 });
 app.post('/upload', upload, function(req, res){
+    res.render('uploaded', {uploaded_file: req.file});
+});
+app.post('/analyze', function(req, res){
+    var filename = req.body.imageFile;
     var url = 'https://api-us.faceplusplus.com/facepp/v3/detect';
-    var image_url = 'https://facialdata.herokuapp.com/public/' + req.file.filename;
-    console.log(req.file.path);
+    var image_url = 'https://facialdata.herokuapp.com/' + filename;
     request.post({
         url: url,
         qs: {
             api_key: 'lzw9nEShl_Xh9A0yjEkhwfn6ys9LKqQ2',
             api_secret: 'i8bWgqp3HyrlQqwZFeR2aLLNh0glFpmx',
-            image_url: req.file.path,        
+            image_url: image_url,        
             return_attributes: 'age,gender,emotion,ethnicity'
         }
     }, function(err, response, body){
@@ -49,7 +56,6 @@ app.post('/upload', upload, function(req, res){
         }
     });
 });
-
 
 app.listen(process.env.PORT || 7000 , process.env.IP, function(){
     console.log('-------------facial analysis is running-------------');
