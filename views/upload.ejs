@@ -1,0 +1,10 @@
+<% include partials/header %>
+    <div class="container custom-container">
+        <h1>Upload An Image</h1>
+        <form  enctype="multipart/form-data"  action="/upload" method="POST">
+            <input id="file_image" type="file" name="userPhoto" required accept="image/*"/><br/>
+            <button type="submit" class="btn-large light-blue darken-4" style="margin-top:5%">Submit</button>
+        </form>
+    </div>
+
+<% include partials/footer %>

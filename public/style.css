@@ -1,0 +1,142 @@
+body{
+    width:100%;
+    min-height:100vh;
+    font-family: 'Raleway', sans-serif;
+    font-size:16px;
+    background: -webkit-repeating-linear-gradient(rgb(70, 252, 221), rgb(0, 71, 27));
+    background-repeat:no-repeat;
+    background: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-66208.jpg');
+    background-attachment:fixed;
+    background-size:cover;
+    overflow-x:hidden;
+}
+#file{
+    margin-top:5%;
+    padding-left:15%;
+    text-align:center;
+    color:rgb(2, 48, 78);
+}
+/* nav */
+nav{
+    background:transparent;
+    box-shadow:none;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+nav ul li a{
+    color:rgb(3, 31, 92);
+}
+.dropdown-content li>a, .dropdown-content li>span {
+    font-size: 16px;
+    color: #0093e9;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+    transition:color 1s ease;
+}
+.dropdown-content li:hover{
+    background-color:black;
+}
+.dropdown-content li a:hover{
+    color:white;
+}
+.divider{
+    background-color: #025686;
+}
+.brand-logo{
+    font-family:'Gruppo', cursive;
+    margin-left:2%;
+    text-transform:none;
+}
+.nav-wrapper li a i{
+    color:white;
+    margin-right:15%;
+}
+.dropdown-content{
+    background-color:black;
+}
+/* end of nav */
+
+
+/* main container */
+.main-container{
+    margin-top:5%;
+    text-align:center;
+    padding:3%;
+}
+.main-container h1{
+    color:white;
+    text-shadow:2px 2px 5px black;
+    font-family:sans-serif;
+    font-weight:bold;
+    font-size:3.5em;
+}
+.main-container img{
+    width:5%;
+}
+.main-container p{
+    font-size:1.3em;
+}
+.main-container i{
+    color:white;
+}
+@media (max-width:800px){
+    .main-container{
+        margin-top:15%;
+    }
+    .main-container p{
+        color:white;
+        font-size:1em;
+        margin-bottom:5%;
+    }
+    .main-container a{
+        margin-top:5%;
+    }
+}
+/* end of main container */
+
+.preload{
+    text-align:center;
+    color:white;
+    margin-top:5%;
+}
+.preload a{
+    color:white;
+    text-shadow:2px 2px 5px black;
+}
+.preload a:hover{
+    color:rgb(165, 163, 163);
+}
+
+/* custom container */
+#learnmore{
+    margin-top:15%;
+}
+.custom-container{
+    padding:5%;
+    margin:5% auto;
+    text-align:center;
+    background: rgba(252, 251, 251, 0.7);
+}
+.custom-container h1{
+    font-family:'Raleway', cursive;
+    font-size:2.5em;
+}
+.custom-container p{
+    color:grey;
+    font-size:1.2em;
+    text-align:left;
+}
+
+/* end of custom container */
+
+/* footer */
+footer{
+    text-align:center;
+    margin-top:10%;
+    padding:5%;
+    background: -webkit-linear-gradient(left bottom, rgb(37, 42, 54), black);
+    color:white;
+}
+
+/* end of footer */

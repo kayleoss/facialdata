@@ -1,0 +1,28 @@
+{
+  "name": "facial-analysis",
+  "version": "1.0.0",
+  "description": "A web tool for users to analyze faces from pictures",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "facial",
+    "analysis"
+  ],
+  "author": "Katie Duo Liu",
+  "license": "ISC",
+  "dependencies": {
+    "atob": "^2.0.3",
+    "body-parser": "^1.18.2",
+    "btoa": "^1.1.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "filereader": "^0.10.3",
+    "form-data": "^2.3.1",
+    "fs": "0.0.1-security",
+    "multer": "^1.3.0",
+    "request": "^2.83.0"
+  }
+}
