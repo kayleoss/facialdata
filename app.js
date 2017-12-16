@@ -38,7 +38,7 @@ app.post('/upload', upload, function(req, res){
 app.post('/analyze', function(req, res){
     var filename = req.body.imageFile;
     var url = 'https://api-us.faceplusplus.com/facepp/v3/detect';
-    var image_url = 'https://facialdata.herokuapp.com/' + filename;
+    var image_url = 'http://facialdata.herokuapp.com/' + filename.toString();
     request.post({
         url: url,
         qs: {
@@ -52,9 +52,7 @@ app.post('/analyze', function(req, res){
             var parsedResults = JSON.parse(body);
             res.render('analyze', {results:parsedResults, image:image_url});
         }else{
-            
             //res.render('error');
-            console.log(err);
             res.send(err + ' ' + JSON.stringify(response) + response.statusCode);
         }
     });
