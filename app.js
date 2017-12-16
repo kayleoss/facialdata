@@ -53,6 +53,7 @@ app.post('/analyze', function(req, res){
             res.render('analyze', {results:parsedResults, image:image_url});
         }else{
             res.render('error');
+            console.log(err);
             //res.send(err + ' ' + JSON.stringify(response) + response.statusCode);
         }
     });
