@@ -37,7 +37,7 @@ app.post('/upload', upload, function(req, res){
         qs: {
             api_key: 'lzw9nEShl_Xh9A0yjEkhwfn6ys9LKqQ2',
             api_secret: 'i8bWgqp3HyrlQqwZFeR2aLLNh0glFpmx',
-            image_url: image_url,        
+            image_url: req.file.path,        
             return_attributes: 'age,gender,emotion,ethnicity'
         }
     }, function(err, response, body){
