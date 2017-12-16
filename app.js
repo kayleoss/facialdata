@@ -51,7 +51,7 @@ app.post('/upload', upload, function(req, res){
         qs: {
             api_key: 'lzw9nEShl_Xh9A0yjEkhwfn6ys9LKqQ2',
             api_secret: 'i8bWgqp3HyrlQqwZFeR2aLLNh0glFpmx',
-            image_url: 'http://localhost:7000/uploads/' + req.file.filename,        
+            image_url: 'https://facialdata.herokuapp.com/uploads/' + req.file.filename,        
             return_attributes: 'age,gender,emotion,ethnicity'
         }
     }, function(err, response, body){
