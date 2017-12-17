@@ -12,9 +12,9 @@
             </div>
             <div class="col s12 m6">
                 <div class="custom-container">
-                    <p>Analysis</p>
-                    <hr>
                     <% results.faces.map(face => { %>
+                        <p>Analysis</p>
+                        <hr>
                         <p class="attribute">Gender: <span style='color:rgb(195, 0, 255);font-weight:bold'><%= face.attributes.gender.value %></span></p>
                         <p class="attribute">Age: <span style='color:rgb(195, 0, 255);font-weight:bold'><%= face.attributes.age.value %></span></p>
                         <p class="attribute">Ethnicity: <span style='color:rgb(195, 0, 255);font-weight:bold'><%= face.attributes.ethnicity.value %></span></p>
