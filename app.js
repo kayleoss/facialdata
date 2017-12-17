@@ -21,9 +21,7 @@ var upload = multer({ storage : storage}).single('userPhoto');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 
 app.get('/', function(req, res){
@@ -38,7 +36,7 @@ app.post('/upload', upload, function(req, res){
 app.post('/analyze', function(req, res){
     var filename = req.body.imageFile;
     var url = 'https://api-us.faceplusplus.com/facepp/v3/detect';
-    var image_url = 'http://facialdata.herokuapp.com/' + filename.toString();
+    var image_url = 'http://facialdata.herokuapp.com/' + filename;
     request.post({
         url: url,
         qs: {
@@ -52,8 +50,8 @@ app.post('/analyze', function(req, res){
             var parsedResults = JSON.parse(body);
             res.render('analyze', {results:parsedResults, image:image_url});
         }else{
-            //res.render('error');
-            res.send(err + ' ' + JSON.stringify(response) + response.statusCode);
+            res.render('error');
+            //res.send(err + ' ' + JSON.stringify(response) + response.statusCode);
         }
     });
 });
