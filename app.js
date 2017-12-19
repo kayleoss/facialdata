@@ -60,11 +60,3 @@ app.listen(process.env.PORT || 7000 , process.env.IP, function(){
     console.log('-------------facial analysis is running-------------');
 })
 
-
-//https://api-us.faceplusplus.com/facepp/v3/detect?api_key=lzw9nEShl_Xh9A0yjEkhwfn6ys9LKqQ2&api_secret=i8bWgqp3HyrlQqwZFeR2aLLNh0glFpmx
-
-
-
-
-//https://api-us.faceplusplus.com/facepp/v3/detect?api_key=lzw9nEShl_Xh9A0yjEkhwfn6ys9LKqQ2&api_secret=i8bWgqp3HyrlQqwZFeR2aLLNh0glFpmx&
-//return_attributes=gender,age,smiling,emotion,ethnicity,beauty
